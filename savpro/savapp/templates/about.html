@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="row align-items-center">
+
+        <!-- Left Side Image -->
+        <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+            <img src="{% static 'css/image/image2.png' %}"
+                 alt="Savira Beauty Launch"
+                 class="img-fluid rounded-4 shadow">
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="col-lg-6">
+            <!-- About Us (Brown Color) -->
+            <h3 class="text-uppercase mb-3"
+                style="color: #8B5E3C; letter-spacing: 2px;">
+                About Us
+            </h3>
+
+            <!-- Savira (Same Gold Color as Logo) -->
+            <h1 class="fw-bold mb-4">
+                Welcome to
+                <span style="color: #E8C45A;">SAVIRA</span>
+                Beauty Launch
+            </h1>
+
+            <!-- Description -->
+            <p class="lead text-secondary mb-4">
+                At Savira Beauty Launch, we believe every person is beautiful.<br>
+                Our professional team provides top-notch beauty & skincare
+                services using premium products in a relaxing environment.
+            </p>
+
+            <!-- Nude Brown Button -->
+            </button>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

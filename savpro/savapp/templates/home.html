@@ -1,0 +1,343 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="hero-section" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1>SAVIRA</h1>
+            <h2>BEAUTY LAUNCH</h2>
+            <h3>Where Beauty Begins</h3>
+
+            <p>
+                Experience premium beauty care with elegance, comfort and confidence.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-warning btn-lg rounded-pill px-4 fw-bold">
+                    BOOK APPOINTMENT
+                </a>
+
+                <a href="#services" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold ms-2">
+                    EXPLORE SERVICES
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container py-5" id="about">
+    <div class="row align-items-center">
+
+        <!-- Left Side Image -->
+        <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+            <img src="{% static 'css/image/image2.png' %}"
+                 alt="Savira Beauty Launch"
+                 class="img-fluid rounded-4 shadow">
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="col-lg-6">
+            <!-- About Us (Brown Color) -->
+            <h3 class="text-uppercase mb-3"
+                style="color: #8B5E3C; letter-spacing: 2px;">
+                About Us
+            </h3>
+
+            <!-- Savira (Same Gold Color as Logo) -->
+            <h1 class="fw-bold mb-4">
+                Welcome to
+                <span style="color: #E8C45A;">SAVIRA</span>
+                Beauty Launch
+            </h1>
+
+            <!-- Description -->
+            <p class="lead text-secondary mb-4">
+                At Savira Beauty Launch, we believe every person is beautiful.<br>
+                Our professional team provides top-notch beauty & skincare
+                services using premium products in a relaxing environment.
+            </p>
+
+            <!-- Nude Brown Button -->
+            </button>
+        </div>
+
+    </div>
+</section>
+<section class="container py-5" id="services">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+        <h5 class="text-uppercase fw-semibold"
+            style="color: #8B5E3C; letter-spacing: 3px;">
+            Our Services
+        </h5>
+
+        <h1 class="fw-bold">
+          <span style="color:black">Our Signature Services</span>
+        </h1>
+
+        <p class="text-muted mt-3">
+            Discover our premium beauty treatments designed to enhance
+            your confidence and natural elegance.
+        </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="row g-4">
+
+        <!-- Bridal Makeup -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+                <div class="card-body p-4 text-center">
+                    <h3 class="fw-bold mb-3 text-warning">Bridal Makeup</h3>
+                    <p class="text-muted">
+                        Make your special day even more beautiful.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hair Styling -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+                <div class="card-body p-4 text-center">
+                    <h3 class="fw-bold mb-3 text-warning">Hair Styling</h3>
+                    <p class="text-muted">
+                        Trendy haircuts, styling &amp; coloring.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Hair Spa -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+                <div class="card-body p-4 text-center">
+                    <h3 class="fw-bold mb-3 text-warning">Hair Spa</h3>
+                    <p class="text-muted">
+                        Relaxing spa for healthy &amp; shiny hair.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Facial Treatment -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+                <div class="card-body p-4 text-center">
+                    <h3 class="fw-bold mb-3 text-warning">Facial Treatment</h3>
+                    <p class="text-muted">
+                        Rejuvenate your skin with our facials.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Nail Art -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+                <div class="card-body p-4 text-center">
+                    <h3 class="fw-bold mb-3 text-warning">Nail Art</h3>
+                    <p class="text-muted">
+                        Beautiful nails for a perfect look.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Skin Care -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+                <div class="card-body p-4 text-center">
+                    <h3 class="fw-bold mb-3 text-info text-warning">Skin Care</h3>
+                    <p class="text-muted">
+                        Advanced skin care solutions.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="gallery-section py-5" id="gallery">
+    <div class="container">
+
+        <!-- Section Title -->
+        <div class="text-center mb-5">
+            <h1 class="fw-bold display-5 text-dark">OUR GALLERY</h1>
+            <p class="text-muted fs-5">
+                Explore our premium beauty transformations and elegant salon ambiance.
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-4">
+
+            <!-- Image 1 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <img src="{% static 'css/image/pic1.png' %}" alt="Gallery Image 1" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <img src="{% static 'css/image/pic2.png' %}" alt="Gallery Image 2" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <img src="{% static 'css/image/pic3.png' %}" alt="Gallery Image 3" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <img src="{% static 'css/image/pic4.png' %}" alt="Gallery Image 4" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <img src="{% static 'css/image/pic5.png' %}" alt="Gallery Image 5" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <img src="{% static 'css/image/pic6.png' %}" alt="Gallery Image 6" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- Image 7 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <img src="{% static 'css/image/pic7.png' %}" alt="Gallery Image 7" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- Image 8 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <img src="{% static 'css/image/pic8.png' %}" alt="Gallery Image 8" class="gallery-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="container py-5" id="contact">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="card border-0 shadow-lg rounded-4 p-5"
+                 style="background: linear-gradient(135deg, #fff0f6, #f8f0ff);">
+
+                <!-- Heading -->
+                <h1 class="text-center mb-5 fw-bold" style="color:gold;">
+                    <i class="fa-solid fa-address-book me-2"></i>
+                    Contact Information
+                </h1>
+
+                <!-- Phone -->
+                <div class="bg-white rounded-4 p-4 shadow-sm mb-4">
+                    <h4 class="fw-bold text-dark">
+                        <i class="fa-solid fa-phone text-success me-2"></i>
+                        Phone
+                    </h4>
+                    <p class="mb-1 text-secondary">+91 1234567890</p>
+                    <p class="mb-0 text-secondary">+91 9876543210</p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white rounded-4 p-4 shadow-sm mb-4">
+                    <h4 class="fw-bold text-dark">
+                        <i class="fa-solid fa-envelope text-danger me-2"></i>
+                        Email
+                    </h4>
+                    <p class="mb-1 text-secondary">info@savirabeautylaunch.com</p>
+                    <p class="mb-0 text-secondary">support@savirabeautylaunch.com</p>
+                </div>
+
+                <!-- Address -->
+                <div class="bg-white rounded-4 p-4 shadow-sm mb-4">
+                    <h4 class="fw-bold text-dark">
+                        <i class="fa-solid fa-location-dot text-warning me-2"></i>
+                        Address
+                    </h4>
+                    <p class="mb-0 text-secondary">
+                        123, Beauty Street, Anna Nagar,<br>
+                        Chennai - 600040, Tamil Nadu, India
+                    </p>
+                </div>
+
+                <!-- Working Hours -->
+                <div class="bg-white rounded-4 p-4 shadow-sm">
+                    <h4 class="fw-bold text-dark">
+                        <i class="fa-solid fa-clock text-info me-2"></i>
+                        Working Hours
+                    </h4>
+                    <p class="mb-1 text-secondary">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                    <p class="mb-0 text-secondary">Sunday: 10:00 AM - 6:00 PM</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="booking-section py-5" id="booking" 
+         style="background: linear-gradient(135deg, #fff0f6, #f8f0ff);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+
+                <!-- Booking Card -->
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden"
+                     style="background: rgba(255,255,255,0.95);">
+
+                    <div class="card-body p-5">
+
+                        <!-- Heading -->
+                        <div class="text-center mb-5">
+                            <h1 class="fw-bold mb-3" style="color:gold;">
+                                ✨ Book Your Appointment
+                            </h1>
+                            <p class="text-secondary fs-5">
+                                Schedule your beauty session with us and let us make your special day even more beautiful.
+                            </p>
+                        </div>
+
+                        <!-- Form -->
+                        <form method="POST" action="{% url 'booking' %}">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+
+                            <!-- Submit Button -->
+                            <button type="submit"
+                                    class="btn btn-lg w-100 py-3 rounded-pill shadow-sm mt-3"
+                                    style="background:gold; color:white;">
+                                Confirm Booking
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <!-- Contact Card -->
+            <div class="card shadow-lg border-0 rounded-4 p-5">
+
+                <!-- Heading -->
+                <h1 class="text-center mb-5 fw-bold text-primary">
+                    <i class="fa-solid fa-address-book me-2"></i>
+                    Contact Information
+                </h1>
+
+                <!-- Phone -->
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark">
+                        <i class="fa-solid fa-phone text-success me-2"></i>
+                        Phone
+                    </h3>
+                    <p class="text-muted fs-5 mb-1">+91 1234567890</p>
+                    <p class="text-muted fs-5">+91 9876543210</p>
+                </div>
+
+                <hr>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark">
+                        <i class="fa-solid fa-envelope text-danger me-2"></i>
+                        Email
+                    </h3>
+                    <p class="text-muted fs-5 mb-1">info@savirabeautylaunch.com</p>
+                    <p class="text-muted fs-5">support@savirabeautylaunch.com</p>
+                </div>
+
+                <hr>
+
+                <!-- Address -->
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark">
+                        <i class="fa-solid fa-location-dot text-warning me-2"></i>
+                        Address
+                    </h3>
+                    <p class="text-muted fs-5">
+                        123, Beauty Street, Anna Nagar,<br>
+                        Chennai - 600040, Tamil Nadu, India
+                    </p>
+                </div>
+
+                <hr>
+
+                <!-- Working Hours -->
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark">
+                        <i class="fa-solid fa-clock text-info me-2"></i>
+                        Working Hours
+                    </h3>
+                    <p class="text-muted fs-5 mb-1">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                    <p class="text-muted fs-5">Sunday: 10:00 AM - 6:00 PM</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "savira-beauty-launch"
+version = "0.1.0"
+description = "Savira Beauty Launch Django application"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "Django==5.2.14",
+    "Pillow==12.2.0",
+    "whitenoise==6.5.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["savpro*", "savapp*"]
