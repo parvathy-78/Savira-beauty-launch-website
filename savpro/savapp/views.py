@@ -19,16 +19,16 @@ from .forms import BookingForm
 
 from django.shortcuts import render, redirect
 
-def booking(request):
-    print("BOOKING VIEW HIT")
+from django.shortcuts import render, redirect
+from .forms import BookingForm
 
-    if request.method == 'POST':
+def booking(request):
+    if request.method == "POST":
         form = BookingForm(request.POST)
 
         if form.is_valid():
             form.save()
             return redirect('success')
-
     else:
         form = BookingForm()
 

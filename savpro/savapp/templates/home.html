@@ -317,6 +317,11 @@
                                 Schedule your beauty session with us and let us make your special day even more beautiful.
                             </p>
                         </div>
+                        {% if form.errors %}
+                        <div style="color:red; margin-bottom:15px;">
+                            {{ form.errors }}
+                        </div>
+                        {% endif %}
 
                         <!-- Form -->
                         <form method="POST" action="{% url 'booking' %}">
@@ -330,6 +335,30 @@
                                 Confirm Booking
                             </button>
                         </form>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const dateField = document.getElementById("id_appointment_date");
+                                const timeField = document.getElementById("id_appointment_time");
+
+                                function updateMinTime() {
+                                    const today = new Date().toISOString().split("T")[0];
+
+                                    if (dateField.value === today) {
+                                        const now = new Date();
+
+                                        const hours = String(now.getHours()).padStart(2, "0");
+                                        const minutes = String(now.getMinutes()).padStart(2, "0");
+
+                                        timeField.min = `${hours}:${minutes}`;
+                                    } else {
+                                        timeField.removeAttribute("min");
+                                    }
+                                }
+
+                                dateField.addEventListener("change", updateMinTime);
+                                updateMinTime();
+                            });
+                            </script>
 
                     </div>
 

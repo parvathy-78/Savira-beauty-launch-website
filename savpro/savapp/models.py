@@ -1,9 +1,7 @@
 from django.db import models
+from django.core.exceptions import ValidationError
+from django.utils import timezone
 
-# Create your models here.
-# savapp/models.py
-
-from django.db import models
 
 class Booking(models.Model):
     SERVICE_CHOICES = [
@@ -19,15 +17,31 @@ class Booking(models.Model):
     phone = models.CharField(max_length=10)
     email = models.EmailField()
 
-    # Dropdown field
     service = models.CharField(
         max_length=50,
         choices=SERVICE_CHOICES
     )
 
     appointment_date = models.DateField()
+    appointment_time = models.TimeField()
+
     message = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def clean(self):
+        super().clean()
+
+        if (
+            self.appointment_date and
+            self.appointment_date < timezone.localdate()
+        ):
+            raise ValidationError({
+                'appointment_date': 'Past dates are not allowed.'
+            })
+
+    def save(self, *args, **kwargs):
+        self.full_clean()  # validation force cheyyum
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
