@@ -27,24 +27,26 @@ SECRET_KEY = 'django-insecure-s#5db*w@hw3dgc%)^&1cssl1g#wf)%8dn-&ik52cwzalgxb@t-
 # Read DEBUG from environment so production can disable it.
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')
 
-# Build ALLOWED_HOSTS from environment variables. On Vercel the
-# `VERCEL_URL` env var contains the deployment hostname (e.g.
-# 'savira-beauty-launch-website-ncv8.vercel.app'). You can also set a
-# comma-separated `ALLOWED_HOSTS` env var for multiple hosts.
+# Build ALLOWED_HOSTS from environment variables so the site works on
+# Vercel, Render, and local development.
 _hosts = os.environ.get('ALLOWED_HOSTS')
 _vercel = os.environ.get('VERCEL_URL')
+_render_host = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+
 if _hosts:
-    # ALLOWED_HOSTS = [h.strip() for h in _hosts.split(',') if h.strip()]
-    ALLOWED_HOSTS = [
-        "localhost",
-        "127.0.0.1",
-        ".vercel.app",
-        "savira-beauty-launch-website-a4nf.vercel.app",
-    ]
+    ALLOWED_HOSTS = [h.strip() for h in _hosts.split(',') if h.strip()]
 elif _vercel:
     ALLOWED_HOSTS = [_vercel]
+elif _render_host:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', _render_host, f'{_render_host}.onrender.com']
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1'] if DEBUG else []
+
+CSRF_TRUSTED_ORIGINS = [
+    f'https://{host}' for host in ALLOWED_HOSTS if host not in {'localhost', '127.0.0.1'}
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
